@@ -25,9 +25,6 @@ export default class ProjectChartTopAddressBalance extends React.Component<Proje
             projectHistory = this.props.projectHistory;
         }
         if (projectHistory === false) return null;
-        // let projectHistoryRes = await SNBUtils.fetchJson("/api/project/history?address=" + this.props.projectId);
-        // let projectHistory = projectHistoryRes.data;
-        // if (projectHistory == null) return null;
 
         let datas10 = [];
         let datas20 = [];

@@ -24,9 +24,6 @@ export default class ProjectChartTVL extends React.Component<ProjectChartTVLProp
             projectHistory = this.props.projectHistory;
         }
         if (projectHistory === false) return null;
-        // let projectHistoryRes = await SNBUtils.fetchJson("/api/project/history?address=" + this.props.projectId);
-        // let projectHistory = projectHistoryRes.data;
-        // if (projectHistory == null) return null;
 
         let datas:any = [];
         for (let i = projectHistory.length - 1; i >= 0; i--) {

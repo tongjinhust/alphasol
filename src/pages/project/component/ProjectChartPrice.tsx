@@ -2,6 +2,7 @@ import React from 'react';
 import Highcharts from 'highcharts'
 import SolanaDateChart from '@component/SolanaDateChart';
 import SNBUtils from '@common/SNBUtils';
+import { SERVER_URL } from '@common/const';
 
 export interface ProjectChartPriceProps {
     projectId: string,
@@ -16,7 +17,7 @@ export default class ProjectChartPrice extends React.Component<ProjectChartPrice
     }
 
     async getChartOptions(key: string | number):Promise<Highcharts.Options | null> {
-        let resp = await SNBUtils.fetchJson("/api/project/priceHistory?address=" + this.props.projectId + "&pageSize=288");
+        let resp = await SNBUtils.fetchJson(SERVER_URL + "/api/project/priceHistory?address=" + this.props.projectId + "&pageSize=288");
         if (resp.data == null) return null;
         let datas = [];
         for (let i = resp.data.length - 1; i >= 0; i--) {

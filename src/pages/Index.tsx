@@ -4,6 +4,7 @@ import PageFooter from '@component/PageFooter';
 import PageHeader from '@component/PageHeader';
 import { history } from '@common/history';
 import SNBUtils from '@common/SNBUtils';
+import { SERVER_URL } from '@common/const';
 
 export default class PageIndex extends React.Component {
     state: {
@@ -20,7 +21,7 @@ export default class PageIndex extends React.Component {
 
     async loopFetcher() {
         SNBUtils.fetchJson
-        let resp = await SNBUtils.fetchJson("api/base/summary");
+        let resp = await SNBUtils.fetchJson(SERVER_URL + "/api/base/summary");
         this.setState({
             pageInfo: resp.data == null ? this.state.pageInfo : resp.data
         })

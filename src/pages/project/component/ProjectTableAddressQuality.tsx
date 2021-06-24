@@ -4,6 +4,7 @@ import "./ProjectTableAddressQuality.scss";
 import { Result, Spin } from 'antd';
 import TabPickerInline from '@component/TabPickerInline';
 import { SelectKeyValue } from '@common/data';
+import { SERVER_URL } from '@common/const';
 
 export interface ProjectTableAddressQualityProps {
     projectId: string,
@@ -28,7 +29,7 @@ export default class ProjectTableAddressQuality extends React.Component<ProjectT
     }
 
     async fetchBaseInfo() {
-        let resp = await SNBUtils.fetchJson("/api/project/retention?address=" + this.props.projectId);
+        let resp = await SNBUtils.fetchJson(SERVER_URL + "/api/project/retention?address=" + this.props.projectId);
         this.setState({
             loaded: false,
             pagedata: resp.data

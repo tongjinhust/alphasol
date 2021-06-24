@@ -19,6 +19,7 @@ import { Result, Spin } from 'antd';
 import ProjectTableTopAddress from './component/ProjectTableTopAddress';
 import ProjectTableAddressQuality from './component/ProjectTableAddressQuality';
 import ProjectPanelMintInfo from './component/ProjectPanelMintInfo';
+import { SERVER_URL } from '@common/const';
 
 export default class PageProjectDetail extends React.Component<any> {
     state: {
@@ -45,7 +46,7 @@ export default class PageProjectDetail extends React.Component<any> {
     }
 
     async fetchBaseInfo() {
-        let resp = await SNBUtils.fetchJson("/api/project/baseInfo?address=" + this.state.projectId);
+        let resp = await SNBUtils.fetchJson(SERVER_URL + "/api/project/baseInfo?address=" + this.state.projectId);
         this.setState({
             loaded: false,
             pagedata: resp.data
@@ -53,14 +54,14 @@ export default class PageProjectDetail extends React.Component<any> {
     }
 
     async fetchHistoryInfo() {
-        let resp = await SNBUtils.fetchJson("/api/project/history?address=" + this.state.projectId + "&pageSize=" + (24 * 7));
+        let resp = await SNBUtils.fetchJson(SERVER_URL + "/api/project/history?address=" + this.state.projectId + "&pageSize=" + (24 * 7));
         this.setState({
             projectHistory: resp.data == null ? false : resp.data
         })
     }
 
     async fetchHistoryInfoDay() {
-        let resp = await SNBUtils.fetchJson("/api/project/historyByDay?address=" + this.state.projectId + "&pageSize=30");
+        let resp = await SNBUtils.fetchJson(SERVER_URL + "/api/project/historyByDay?address=" + this.state.projectId + "&pageSize=30");
         this.setState({
             projectHistoryDay: resp.data == null ? false : resp.data
         })

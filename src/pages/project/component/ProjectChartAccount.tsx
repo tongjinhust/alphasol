@@ -24,9 +24,6 @@ export default class ProjectChartAccount extends React.Component<ProjectChartAcc
             projectHistory = this.props.projectHistory;
         }
         if (projectHistory === false) return null;
-        // let projectHistoryRes = await SNBUtils.fetchJson("/api/project/history?address=" + this.props.projectId);
-        // let projectHistory = projectHistoryRes.data;
-        // if (projectHistory == null) return null;
 
         let count_total:any = [];
         let count_new:any = [];

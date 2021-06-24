@@ -14,3 +14,5 @@ export enum SymbolToken {
 export const WeekDayArr = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 export const WeekDayFullArr = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 export const MonthArr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+export const SERVER_URL = "https://www.solpro.ai";

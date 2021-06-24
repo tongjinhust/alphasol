@@ -7,7 +7,7 @@ import { ActiveAirDrop, ActiveNews } from '../../data/ActivityDateList';
 
 import "./ActivityList.scss";
 import SNBUtils from '@common/SNBUtils';
-import { MonthArr, WeekDayArr } from '@common/const';
+import { MonthArr, SERVER_URL, WeekDayArr } from '@common/const';
 import { Result, Spin } from 'antd';
 
 export default class PageActivityList extends React.Component {
@@ -26,7 +26,7 @@ export default class PageActivityList extends React.Component {
     }
 
     async fetchPageInfo() {
-        let resp = await SNBUtils.fetchJson("/api/activity/list");
+        let resp = await SNBUtils.fetchJson(SERVER_URL + "/api/activity/list");
         this.setState({
             loaded: false,
             pagedata: resp.data

@@ -7,6 +7,7 @@ import SNBUtils from '@common/SNBUtils';
 import { history } from '@common/history';
 
 import "./ProjectList.scss";
+import { SERVER_URL } from '@common/const';
 
 export default class PageProjectList extends React.Component {
     state: {
@@ -24,7 +25,7 @@ export default class PageProjectList extends React.Component {
     }
 
     async fetchPageInfo() {
-        let resp = await SNBUtils.fetchJson("/api/project/list");
+        let resp = await SNBUtils.fetchJson(SERVER_URL + "/api/project/list");
         this.setState({
             loaded: false,
             pagedata: resp.data

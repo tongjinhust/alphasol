@@ -7,6 +7,7 @@ import { ActiveAirDrop } from '../../data/ActivityDateList';
 import "./ActivityDetail.scss";
 import SNBUtils from '@common/SNBUtils';
 import { Result, Spin } from 'antd';
+import { SERVER_URL } from '@common/const';
 
 export default class PageActivityDetail extends React.Component<any> {
     state: {
@@ -27,7 +28,7 @@ export default class PageActivityDetail extends React.Component<any> {
     }
 
     async fetchPageInfo() {
-        let resp = await SNBUtils.fetchJson("/api/activity/detail?id=" + this.state.activityId);
+        let resp = await SNBUtils.fetchJson(SERVER_URL + "/api/activity/detail?id=" + this.state.activityId);
         this.setState({
             loaded: false,
             activityInfo: resp.data
@@ -48,7 +49,7 @@ export default class PageActivityDetail extends React.Component<any> {
                                     activityInfo != null &&
                                     <div className="page-activity-detail-panel">
                                         <div className="page-activity-detail-baseinfo">
-                                            <img className="page-activity-detail-baseinfo-icon" src={ activityInfo.airdrop_info.icon } />
+                                            <img className="page-activity-detail-baseinfo-icon" src={ SERVER_URL + activityInfo.airdrop_info.icon } />
                                             <div className="page-activity-detail-baseinfo-right">
                                                 <div className="page-activity-detail-baseinfo-title">{ activityInfo.title }</div>
                                                 <div className="page-activity-detail-baseinfo-duration">

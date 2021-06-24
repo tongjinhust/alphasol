@@ -24,9 +24,6 @@ export default class ProjectChartTransaction extends React.Component<ProjectChar
             projectHistory = this.props.projectHistory;
         }
         if (projectHistory === false) return null;
-        // let projectHistoryRes = await SNBUtils.fetchJson("/api/project/history?address=" + this.props.projectId);
-        // let projectHistory = projectHistoryRes.data;
-        // if (projectHistory == null) return null;
 
         let data10k:any = [];
         let data100k:any = [];

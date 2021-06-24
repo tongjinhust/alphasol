@@ -65,16 +65,6 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
         host: "127.0.0.1",
-        port: 3000,
-        proxy: {
-            '/api/': {
-                target: 'http://119.97.174.197:9991/',
-                secure: false,
-                changeOrigin: true,
-                pathRewrite: {
-                    '^/api/': '/'
-                }
-            }
-        }
+        port: 3000
     },
 }
