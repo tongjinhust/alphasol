@@ -1,0 +1,73 @@
+.page-project-detail {
+    &-topinfo {
+        &-title {
+            font-size: 16px;
+            line-height: 60px;
+            font-weight: bold;
+            border-bottom: 1px solid #EFEFEF;
+        }
+        &-container {
+            display: flex;
+            &-main {
+                flex: 1;
+            }
+            &-right {
+                width: 400px;
+                margin-left: 30px;
+            }
+        }
+    }
+    &-split{
+        height: 12px;
+    }
+    &-panel {
+        background-color: rgb(0, 26, 44);
+        padding: 0 140px 30px;
+        &-title {
+            padding: 23px 38px 9px;
+            border-bottom: 1px solid rgb(19, 55, 82);
+            font-size: 24px;
+            font-weight: 500;
+            color: #ffffff;
+            line-height: 32px;
+        }
+        &-content {
+            padding: 0px 38px;
+        }
+    }
+    &-chart-row {
+        display: flex;
+        justify-content: space-between;
+        &-item {
+            width: 500px;
+        }
+    }
+    &-chart-title {
+        display: flex;
+        .notice {
+            width: 16px;
+            height: 16px;
+            font-size: 12px;
+            color: #BBBBBB;
+            background-color: rgba(255,255,255,0.5);
+            border-radius: 50%;
+            line-height: 16px;
+            text-align: center;
+            transform: scale(0.7);
+            margin-top: 2px;
+        }
+    }
+}
+.page-project-detail-chart-tip {
+    padding: 8px 14px;
+    width: 300px;
+    font-size: 12px;
+    font-family: Poppins-Regular, Poppins;
+    font-weight: 400;
+    color: #16133E;
+    line-height: 18px;
+    span {
+        font-weight: 500;
+        margin-right: 5px;
+    }
+}

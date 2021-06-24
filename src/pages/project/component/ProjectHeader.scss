@@ -1,0 +1,98 @@
+.page-project-detail-header {
+    padding: 47px 180px 41px;
+    background-color: rgb(0, 26, 44);
+    &-line1 {
+        display: flex;
+        justify-content: space-between;
+        &-left {
+            display: flex;
+            height: 60px;
+            align-items: center;
+            margin-left: -40px;
+        }
+        &-icon {
+            height: 40px;
+            width: 40px;
+        }
+        &-title {
+            margin-left: 10px;
+            font-size: 40px;
+            font-weight: 600;
+            color: #FFFFFF;
+            line-height: 60px;
+        }
+        &-token {
+            margin-left: 12px;
+            margin-top: 10px;
+            font-size: 24px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 32px;
+        }
+        &-price {
+            text-align: right;
+            margin-top: 12px;
+            margin-bottom: 12px;
+            font-size: 40px;
+            font-weight: 800;
+            color: #FFFFFF;
+            line-height: 32px;
+        }
+        &-change {
+            text-align: right;
+            font-size: 20px;
+            font-weight: 800;
+            line-height: 28px;
+        }
+    }
+    &-line2 {
+        margin-top: 27px;
+        display: flex;
+        justify-content: space-between;
+        &-left {
+            display: flex;
+        }
+        &-item {
+            &:last-child {
+                margin-right: 0px;
+            }
+            margin-right: 36px;
+            &-label {
+                font-size: 16px;
+                font-weight: 400;
+                color: rgba(255, 255, 255, 0.5);
+                line-height: 16px;
+            }
+            &-value {
+                margin-top: 9px;
+                font-size: 16px;
+                font-weight: 500;
+                color: #FFFFFF;
+                line-height: 16px;
+            }
+            &-pricechange{
+                display: flex;
+                justify-content: flex-end;
+                font-size: 16px;
+                font-weight: 500;
+                color: rgba(255, 255, 255, 0.4);
+                line-height: 16px;
+                padding: 4px 0;
+                .pricesymbol {
+                    width: 30px;
+                    text-align: right;
+                }
+                label {
+                    margin-left: 4px;
+                    width: 55px;
+                    text-align: right;
+                }
+            }
+        }
+        &-right {
+            display: flex;
+            justify-content: right;
+            text-align: right;
+        }
+    }
+}

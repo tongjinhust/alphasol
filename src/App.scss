@@ -1,0 +1,190 @@
+@import '~antd/dist/antd.css';
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: Poppins, sans-serif;
+    background-color: #F2F2F2;
+    min-width: 1440px;
+}
+
+.m-page-header {
+    background: #011D32;
+    &-content {
+        display: flex;
+        align-items: center;
+        height: 108px;
+        justify-content: space-between;
+        overflow: hidden;
+        padding: 0 160px;
+    }
+    &-left {
+        display: flex;
+        align-items: center;
+    }
+    &-pow {
+        font-size: 14px;
+        font-weight: 400;
+        color: #FFFFFF;
+        line-height: 21px;
+        opacity: 0.7;
+        margin-left: 8px;
+        margin-top: 6px;
+    }
+    &-logo img{
+        width: 159px;
+        height: 60px;
+    }
+    &-navs {
+        display: flex;
+        &-item{
+            margin: 0 30px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #FFFFFF;
+            line-height: 16px;
+            cursor: pointer;
+            &.active {
+                font-weight: 800;
+                color: #00E4B5;
+            }
+        }
+    }
+    &-language {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 16px;
+        color: rgba(255,255,255, 0.5);
+        img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        &-split {
+            margin: 0 5px;
+        }
+        &-item.active {
+            color: #FFFFFF;
+        }
+    }
+}
+
+.m-page-split {
+    height: 12px;
+}
+
+.m-page-container {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.m-page-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 19, 33);
+}
+
+.m-page-holder {
+    min-height: 400px;
+    text-align: center;
+    padding: 100px 0;
+    box-sizing: border-box;
+}
+
+.m-page-footer {
+    background: #011D32;
+    &-content {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        align-items: center;
+        padding-top: 30px;
+    }
+    &-slogan {
+        margin-top: 32px;
+        font-size: 32px;
+        font-weight: 600;
+        color: #FFFFFF;
+        line-height: 68px;
+        letter-spacing: 1px;
+    }
+    &-subbtn {
+        margin-top: 18px;
+        width: 192px;
+        height: 46px;
+        border-radius: 23px;
+        border: 2px solid #00E3B5;
+        font-size: 16px;
+        font-weight: 400;
+        color: #FFFFFF;
+        line-height: 42px;
+        text-align: center;
+        cursor: pointer;
+        &:hover,&:link {
+            color: #FFFFFF;
+        }
+    }
+    &-contract-label {
+        margin-top: 79px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #FFFFFF;
+        line-height: 22px;
+    }
+    &-contract-items {
+        display: flex;
+        margin-top: 9px;
+        & a {
+            &:first-child {
+                margin-left: 9px;
+            }
+            font-size: 0;
+            margin: 0 10px;
+            & img{
+                width: 20px;
+                height: 17px;
+            }
+        }
+    }
+    &-copyright {
+        margin-top: 48px;
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.5);
+        line-height: 22px;
+        margin-bottom: 72px;
+        text-align: center;
+    }
+}
+
+.font-chinese {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "segoe ui", Roboto, Helvetica, Arial, sans-serif;
+}
+.font-english {
+    font-family: Poppins, sans-serif;
+}
+.font-number {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "segoe ui", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.change-color-bad {
+    color: #E00000;
+}
+.change-color-good {
+    color: #00B454;
+}
+.text-right {
+    text-align: right;
+}
+
+.ant-popover-inner-content {
+    padding: 0;
+}

@@ -1,0 +1,39 @@
+.page-project-detail-mintinfo {
+    display: flex;
+    padding-top: 30px;
+    &-content {
+        flex: 1;
+        font-size: 12px;
+        font-weight: 500;
+        color: #FFFFFF;
+        line-height: 20px;
+        white-space: pre-wrap;
+    }
+    &-table {
+        width: 500px;
+        margin-left: 30px;
+        table {
+            td, th {
+                font-size: 12px;
+                text-align: left;
+                line-height: 36px;
+                border: 1px solid rgb(19, 55, 82);
+                padding: 0 10px;
+                font-weight: 500;
+                text-align: right;
+                &:first-child {
+                    text-align: left;
+                }
+            }
+            th {
+                color: rgba(255, 255, 255, 0.5);
+            }
+            td {
+                color: #FFFFFF;
+            }
+            .col-cate {
+                width: 305px;
+            }
+        }
+    }
+}
